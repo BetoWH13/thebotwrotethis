@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 /* Base Reset + Typography */
@@ -10,7 +11,7 @@
 body {
   background-color: #0d0d0d;
   color: #e0e0e0;
-  font-family: 'Special Elite', monospace;
+  font-family: 'Special+Elite', monospace;
   line-height: 1.6;
   padding: 2rem;
   max-width: 900px;
@@ -99,6 +100,21 @@ body {
   box-shadow: 0 0 10px #ff0040aa;
 }
 
+/* Prediction Output Animation */
+.prediction-output {
+  margin-top: 1rem;
+  color: #ccc;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 /* Share Buttons */
 .share-buttons {
   margin-top: 2rem;
@@ -123,7 +139,7 @@ body {
   border-color: #ff0040;
 }
 
-/* Grid Layout (hall, confessional) */
+/* Grid Layout */
 .grid {
   display: grid;
   gap: 1rem;
@@ -171,3 +187,23 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.footer-note {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+
+.footer-note a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
