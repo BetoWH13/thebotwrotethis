@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 /* Base Reset + Typography */
 * {
   margin: 0;
@@ -8,7 +10,7 @@
 body {
   background-color: #0d0d0d;
   color: #e0e0e0;
-  font-family: 'Courier New', monospace;
+  font-family: 'Special Elite', monospace;
   line-height: 1.6;
   padding: 2rem;
   max-width: 900px;
@@ -18,9 +20,11 @@ body {
 /* Header Glitch Effect */
 .glitch-header h1 {
   font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: #ffffff;
   text-shadow: 2px 0 red, -2px 0 cyan;
-  animation: glitch 1.5s infinite;
+  animation: glitch 1.5s infinite alternate;
 }
 
 .subtext {
@@ -31,18 +35,21 @@ body {
 }
 
 @keyframes glitch {
-  0% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  0% { opacity: 1; text-shadow: 2px 0 red, -2px 0 cyan; }
   20% { text-shadow: -2px 0 red, 2px 0 cyan; }
-  40% { text-shadow: 2px 2px red, -2px -2px cyan; }
+  40% { opacity: 0.85; text-shadow: 2px 2px red, -2px -2px cyan; }
   60% { text-shadow: -1px -1px red, 1px 1px cyan; }
-  100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  100% { opacity: 1; text-shadow: 2px 0 red, -2px 0 cyan; }
 }
 
-/* Manifesto */
+/* Manifesto Block */
 .manifesto {
   margin-top: 2rem;
-  border-left: 3px solid #666;
+  border-left: 4px dashed #555;
   padding-left: 1rem;
+  background: #101010;
+  padding: 1rem;
+  box-shadow: inset 0 0 5px #000;
 }
 
 .manifesto h2 {
@@ -81,6 +88,7 @@ body {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-family: 'Special Elite', monospace;
 }
 
 .share-buttons button:hover {
@@ -88,7 +96,7 @@ body {
   border-color: #ff0040;
 }
 
-/* Grid layout for Hall of Shame */
+/* Grid Layout */
 .grid {
   display: grid;
   gap: 1rem;
@@ -96,12 +104,13 @@ body {
   margin-top: 2rem;
 }
 
-/* AI Profile Cards */
+/* AI Profile or Confessional Cards */
 .card {
-  background: #1a1a1a;
+  background: #121212;
   border: 1px solid #333;
   padding: 1rem;
   border-radius: 4px;
+  box-shadow: inset 0 0 0 1px #222;
   transition: border 0.2s ease;
 }
 
@@ -115,12 +124,30 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* CTA Buttons */
+.cta button {
+  font-family: 'Special Elite', monospace;
+  background: #110000;
+  border: 1px solid #ff0040;
+  color: #ff0040;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.cta button:hover {
+  background: #1a0000;
+  box-shadow: 0 0 10px #ff0040aa;
+}
+
 /* Footer */
 footer {
   margin-top: 3rem;
   font-size: 0.85rem;
   color: #666;
   text-align: center;
+  border-top: 1px dashed #333;
+  padding-top: 1rem;
 }
 
 footer a {
@@ -132,4 +159,5 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
 
