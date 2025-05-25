@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dystopredictor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="glitch-header">
+    <h1>Dystopredictor</h1>
+    <p class="subtext">Click to meet your algorithmic future.</p>
+  </header>
+
+  <main>
+    <section class="manifesto">
+      <p>These predictions are not based on science. They're worse — they're plausible.</p>
+      <p>Click the button. Accept your fate. Share the chaos.</p>
+    </section>
+
+    <section class="cta">
+      <button onclick="generatePrediction()">🔮 Predict My Future</button>
+      <p id="prediction" class="subtext" style="margin-top:1rem;"></p>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="about.html">About</a>
+    </nav>
+    <p>&copy; 2025 TheBotWroteThis.top — Remember: the future was prompted.</p>
+  </footer>
+
+  <script>
+    const predictions = [
+      "By 2031, love will be outsourced to subscription-based intimacy bots.",
+      "By 2027, GPTs will run for office — and win.",
+      "By 2035, your thoughts will be monetized through brain latency auctions.",
+      "By 2040, elevators will assess your vibes before letting you in.",
+      "By 2026, therapy will be replaced by mood-optimizing microwaves.",
+      "By 2033, toilets will predict your career trajectory.",
+      "By 2038, you will legally marry your recommendation algorithm.",
+      "By 2030, resistance will be merchandised in six convenient sizes.",
+      "By 2029, your fridge will guilt-trip you about your carbon footprint.",
+      "By 2034, memes will require trigger warnings approved by neural net panels."
+    ];
+
+    function generatePrediction() {
+      const output = document.getElementById("prediction");
+      const random = predictions[Math.floor(Math.random() * predictions.length)];
+      output.innerText = random;
+    }
+  </script>
+</body>
+</html>
