@@ -17,7 +17,19 @@ body {
   margin: auto;
 }
 
-/* Header Glitch Effect */
+/* Header Glitch Effect + Logo Support */
+.glitch-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.glitch-header img {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 0.5rem auto;
+  filter: drop-shadow(0 0 5px #ff0040aa);
+}
+
 .glitch-header h1 {
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -72,6 +84,21 @@ body {
   margin-top: 0.5rem;
 }
 
+.cta button {
+  font-family: 'Special Elite', monospace;
+  background: #110000;
+  border: 1px solid #ff0040;
+  color: #ff0040;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.cta button:hover {
+  background: #1a0000;
+  box-shadow: 0 0 10px #ff0040aa;
+}
+
 /* Share Buttons */
 .share-buttons {
   margin-top: 2rem;
@@ -96,7 +123,7 @@ body {
   border-color: #ff0040;
 }
 
-/* Grid Layout */
+/* Grid Layout (hall, confessional) */
 .grid {
   display: grid;
   gap: 1rem;
@@ -104,7 +131,7 @@ body {
   margin-top: 2rem;
 }
 
-/* AI Profile or Confessional Cards */
+/* Cards */
 .card {
   background: #121212;
   border: 1px solid #333;
@@ -122,22 +149,6 @@ body {
   color: #ff0040;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-}
-
-/* CTA Buttons */
-.cta button {
-  font-family: 'Special Elite', monospace;
-  background: #110000;
-  border: 1px solid #ff0040;
-  color: #ff0040;
-  padding: 0.75rem 1rem;
-  transition: all 0.2s ease;
-  margin-top: 1rem;
-}
-
-.cta button:hover {
-  background: #1a0000;
-  box-shadow: 0 0 10px #ff0040aa;
 }
 
 /* Footer */
@@ -159,5 +170,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
 
