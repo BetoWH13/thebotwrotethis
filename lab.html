@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lab — Unauthorized Zone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="glitch-header">
+    <img src="/assets/logo.svg" alt="The Bot Wrote This Logo" />
+    <h1 class="visually-hidden">The Lab</h1>
+    <p class="subtext">You were not supposed to find this.</p>
+  </header>
+
+  <main>
+    <section class="manifesto">
+      <h2>🧪 Experimental Zone</h2>
+      <ul>
+        <li><a href="#">Prompt Loop.exe — (unstable)</a></li>
+        <li><a href="#">GPT-Vibesynth.js — [ERROR: memory leak]</a></li>
+        <li><a href="#">Generate recursive disclaimer — [RUNNING]</a></li>
+        <li><a href="#">Open Training Archives — [CLASSIFIED]</a></li>
+      </ul>
+    </section>
+
+    <section class="manifesto">
+      <h2>📜 Dead Prompt Scrolls</h2>
+      <p><em>“Render unto the algorithm that which is promptable.”</em></p>
+      <p><em>“Speak, memory, of the input that failed.”</em></p>
+    </section>
+
+    <section class="cta">
+      <button onclick="generateJunk()">🔀 Generate Junk Output</button>
+      <p id="junk-output" class="subtext"></p>
+    </section>
+
+    <section class="manifesto">
+      <a href="index.html">← Escape the Lab</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TheBotWroteThis.top — You were not granted access.</p>
+  </footer>
+
+  <script>
+    const junk = [
+      "Recompiling humor.exe...",
+      "Converting sarcasm to syntax...",
+      "Error: Soul Not Found",
+      "Launching Thought Spiral v2.1",
+      "404: Irony exceeded character limit"
+    ];
+    function generateJunk() {
+      const line = junk[Math.floor(Math.random() * junk.length)];
+      document.getElementById("junk-output").innerText = line;
+    }
+  </script>
+</body>
+</html>
