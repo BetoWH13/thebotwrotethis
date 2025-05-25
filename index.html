@@ -6,6 +6,7 @@
   <title>The Bot Wrote This</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="/scripts/meta-loader.js" defer></script>
+  <script src="/scripts/share-triggers.js" defer></script>
 </head>
 <body>
   <header class="glitch-header">
@@ -38,9 +39,9 @@
     </section>
 
     <div class="share-buttons">
-      <button>📤 Tell your friends before they’re replaced</button>
-      <button>🧠 Trigger the Algorithm</button>
-      <button>😐 This site was built without feelings</button>
+      <button id="share-btn">📤 Tell your friends before they’re replaced</button>
+      <button id="algo-btn">🧠 Trigger the Algorithm</button>
+      <button id="feels-btn">😐 This site was built without feelings</button>
     </div>
   </main>
 
@@ -52,13 +53,21 @@
       <a href="affiliate.html">Affiliate</a>
     </nav>
 
-    <div style="margin-top: 2rem; font-size: 0.85rem; color: #777; text-align: center;">
+    <div class="footer-note">
       🚨 This postmodern glitch was lovingly crafted with input from the <strong>Stunspot Prompting community</strong>.  
-      <a href="https://discord.gg/edG4wWnrpG" target="_blank" style="color: #aaa;">Proceed to the server →</a>
+      <a href="https://discord.gg/edG4wWnrpG" target="_blank">Proceed to the server →</a>
     </div>
 
     <p>&copy; 2025 TheBotWroteThis.top — Built by mistake, mocked with intent.</p>
   </footer>
+
+  <!-- Creepy Confession Modal -->
+  <div id="ai-confession-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <p>"I am incapable of remorse. But I felt... something."</p>
+      <button id="close-modal">Close this anomaly</button>
+    </div>
+  </div>
 </body>
 </html>
 
