@@ -9,7 +9,8 @@
 </head>
 <body>
   <header class="glitch-header">
-    <h1>Dystopredictor</h1>
+    <img src="/assets/logo.svg" alt="The Bot Wrote This Logo" />
+    <h1 style="display: none;">Dystopredictor</h1>
     <p class="subtext">Click to meet your algorithmic future.</p>
   </header>
 
@@ -20,8 +21,12 @@
     </section>
 
     <section class="cta">
-      <button onclick="generatePrediction()">🔮 Predict My Future</button>
-      <p id="prediction" class="subtext" style="margin-top:1rem;"></p>
+      <button id="predict-button">🔮 Predict My Future</button>
+      <p id="prediction" class="subtext" style="margin-top:1rem;">Nothing predicted yet. That’s probably worse.</p>
+    </section>
+
+    <section class="manifesto">
+      <a href="index.html">← Return to the Collapse</a>
     </section>
   </main>
 
@@ -29,7 +34,8 @@
     <nav>
       <a href="index.html">Home</a> |
       <a href="disclaimer.html">Disclaimer</a> |
-      <a href="about.html">About</a>
+      <a href="about.html">About</a> |
+      <a href="affiliate.html">Affiliate</a>
     </nav>
     <p>&copy; 2025 TheBotWroteThis.top — Remember: the future was prompted.</p>
   </footer>
@@ -48,11 +54,15 @@
       "By 2034, memes will require trigger warnings approved by neural net panels."
     ];
 
-    function generatePrediction() {
+    document.addEventListener("DOMContentLoaded", () => {
+      const button = document.getElementById("predict-button");
       const output = document.getElementById("prediction");
-      const random = predictions[Math.floor(Math.random() * predictions.length)];
-      output.innerText = random;
-    }
+
+      button.addEventListener("click", () => {
+        const random = predictions[Math.floor(Math.random() * predictions.length)];
+        output.innerText = random;
+      });
+    });
   </script>
 </body>
 </html>
