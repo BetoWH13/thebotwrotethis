@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://thebotwrotethis.top/sitemap.xml
