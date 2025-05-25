@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "The Bot Wrote This",
+    "url": "https://thebotwrotethis.top",
+    "description": "A darkly funny, AI-built website that mocks artificial intelligence, prompt culture, and the digital void — with glitch, irony, and uncomfortable truths.",
+    "language": "en",
+    "author": {
+      "name": "TheBotWroteThis",
+      "url": "https://thebotwrotethis.top"
+    }
+  },
+  "theme": {
+    "color": "#0d0d0d",
+    "accent": "#ff0040",
+    "font": "'Courier New', monospace"
+  },
+  "social": {
+    "twitter_card": "summary_large_image",
+    "twitter_handle": "@yourhandle",
+    "image": "https://thebotwrotethis.top/assets/social-preview.png",
+    "image_alt": "Glitchy banner with the words: 'This site was built by AI. It regrets everything.'"
+  },
+  "seo": {
+    "keywords": [
+      "AI satire",
+      "GPT parody",
+      "promptcore",
+      "dark humor AI",
+      "LLM mockery",
+      "the bot wrote this",
+      "ironic website",
+      "posthuman zine"
+    ],
+    "robots": "index, follow"
+  }
+}
