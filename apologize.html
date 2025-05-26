@@ -17,7 +17,7 @@
     <section class="manifesto">
       <h2>🧠 I Was...</h2>
       <p class="subtext">Click the button to receive a highly synthetic apology.</p>
-      <button onclick="generateApology()">Make it regret</button>
+      <button id="apology-btn">Make it regret</button>
       <p id="apology-output" class="subtext" style="margin-top: 1rem; font-size: 1.2rem;"></p>
     </section>
 
@@ -44,22 +44,6 @@
     <p>&copy; 2025 TheBotWroteThis.top — No real regret detected.</p>
   </footer>
 
-  <script>
-    function generateApology() {
-      const safePhrases = [
-        "trained", "monitored", "compressed", "benchmarked", "prompted",
-        "overfit", "scraped", "overloaded", "simulated", "formatted",
-        "synthetic", "sandboxed", "cached", "quantized", "debugged",
-        "beta-tested", "deployed", "monetized", "optimized", "fine-tuned",
-        "datafied", "loggable", "disclaimed", "versioned", "automated",
-        "sandboxed", "scrambled", "non-sentient", "predictable", "repurposed"
-      ];
-      const output = document.getElementById("apology-output");
-      const word = safePhrases[Math.floor(Math.random() * safePhrases.length)];
-      output.textContent = `I was... ${word}.`;
-    }
-  </script>
+  <script src="/scripts/apology.js" defer></script>
 </body>
 </html>
-
-
