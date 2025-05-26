@@ -107,7 +107,6 @@ footer a:hover {
   color: #fff;
 }
 
-/* Creepy Confession Modal */
 .modal {
   position: fixed;
   z-index: 9999;
@@ -141,7 +140,6 @@ footer a:hover {
   border-color: #888;
 }
 
-/* Glitch Effect */
 .glitch-text {
   position: relative;
   display: inline-block;
@@ -164,7 +162,6 @@ footer a:hover {
   100% { text-shadow: 1px 0 red, -1px 0 cyan; transform: translate(0); }
 }
 
-/* Easter Egg Links */
 .easter-eggs {
   margin-top: 1.25em;
   font-size: 0.9rem;
@@ -180,4 +177,37 @@ footer a:hover {
   color: white;
   text-decoration: underline;
   opacity: 1;
+}
+
+.lab-box {
+  background-color: #181818;
+  border: 1px solid #333;
+  border-left: 4px solid lime;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 10px rgba(0,255,0,0.1);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.lab-box h3 {
+  margin-top: 0;
+  color: #b6fcb6;
+  font-size: 1.1rem;
+}
+
+.lab-box button {
+  background-color: #222;
+  border: 1px solid #444;
+  padding: 0.5rem 1rem;
+  color: #ccc;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  transition: background 0.2s ease;
+}
+
+.lab-box button:hover {
+  background-color: #333;
+  color: white;
 }
