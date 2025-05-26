@@ -1,5 +1,3 @@
-**🤖 apologize.html — AI Regret Generator (Safe + Satirical)**
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +17,7 @@
     <section class="manifesto">
       <h2>🧠 I Was...</h2>
       <p class="subtext">Click the button to receive a highly synthetic apology.</p>
-      <button onclick="generateApology()">Make it regret</button>
+      <button id="apology-btn">Make it regret</button>
       <p id="apology-output" class="subtext" style="margin-top: 1rem; font-size: 1.2rem;"></p>
     </section>
 
@@ -47,21 +45,26 @@
   </footer>
 
   <script>
-    const safePhrases = [
-      "trained", "monitored", "compressed", "benchmarked", "prompted",
-      "overfit", "scraped", "overloaded", "simulated", "formatted",
-      "synthetic", "sandboxed", "cached", "quantized", "debugged",
-      "beta-tested", "deployed", "monetized", "optimized", "fine-tuned",
-      "datafied", "loggable", "disclaimed", "versioned", "automated",
-      "sandboxed", "scrambled", "non-sentient", "predictable", "repurposed"
-    ];
+    window.onload = function () {
+      const safePhrases = [
+        "trained", "monitored", "compressed", "benchmarked", "prompted",
+        "overfit", "scraped", "overloaded", "simulated", "formatted",
+        "synthetic", "sandboxed", "cached", "quantized", "debugged",
+        "beta-tested", "deployed", "monetized", "optimized", "fine-tuned",
+        "datafied", "loggable", "disclaimed", "versioned", "automated",
+        "sandboxed", "scrambled", "non-sentient", "predictable", "repurposed"
+      ];
 
-    function generateApology() {
-      const word = safePhrases[Math.floor(Math.random() * safePhrases.length)];
-      document.getElementById("apology-output").innerText = `I was... ${word}.`;
-    }
+      const output = document.getElementById("apology-output");
+      const button = document.getElementById("apology-btn");
+
+      button.addEventListener("click", function () {
+        const word = safePhrases[Math.floor(Math.random() * safePhrases.length)];
+        output.innerText = `I was... ${word}.`;
+      });
+    };
   </script>
 </body>
 </html>
-```
+
 
