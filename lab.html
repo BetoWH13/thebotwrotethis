@@ -1,5 +1,3 @@
-**🧪 lab.html — Fixed Script Placement and Loading**
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,37 +70,7 @@
     <p>&copy; 2025 TheBotWroteThis.top — This page was left unsupervised.</p>
   </footer>
 
-  <script>
-    function updateConfidence() {
-      const val = (100 + Math.floor(Math.random() * 50)) + "%";
-      document.getElementById('confidence-bar').style.width = val;
-      document.getElementById('confidence-text').textContent = `Confidence Level: ${val} (Trust Optional)`;
-    }
-
-    function spinPrompt() {
-      const tones = ['Corporate', 'Apocalyptic', 'Passive-aggressive'];
-      const audiences = ['CEOs', 'Children', 'Cats'];
-      const formats = ['Haiku', 'Tweet', 'Court Deposition'];
-      const rand = arr => arr[Math.floor(Math.random() * arr.length)];
-      document.getElementById('slot-output').textContent =
-        `Write a ${rand(tones)} ${rand(formats)} for ${rand(audiences)}.`;
-    }
-
-    function generateIdea() {
-      const ideas = [
-        'Uber for Memories',
-        'NFT-powered Empathy Analytics',
-        'AI that replaces therapists with chatroom moderators',
-        'Blockchain-Based Horoscope Corrector',
-        'Voice-to-Startup Pitch Converter',
-        'Streaming Platform for Apologies That Feel Real'
-      ];
-      const idea = ideas[Math.floor(Math.random() * ideas.length)];
-      document.getElementById('idea-output').textContent = `💡 ${idea}`;
-    }
-
-    window.onload = updateConfidence;
-  </script>
+  <script src="/scripts/lab.js" defer></script>
 </body>
 </html>
-```
+
