@@ -1,4 +1,4 @@
-**🧪 lab.html — Full Satirical Page Patch**
+**🧪 lab.html — Experimental Interface Chamber (Interactive Joke Trio)**
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +18,37 @@
   <meta name="twitter:image" content="https://thebotwrotethis.top/assets/og-preview.png" />
   <link rel="canonical" href="https://thebotwrotethis.top/lab.html" />
   <link rel="stylesheet" href="/styles.css" />
+  <script>
+    function updateConfidence() {
+      const val = (100 + Math.floor(Math.random() * 50)) + "%";
+      document.getElementById('confidence-bar').style.width = val;
+      document.getElementById('confidence-text').textContent = `Confidence Level: ${val} (Trust Optional)`;
+    }
+
+    function spinPrompt() {
+      const tones = ['Corporate', 'Apocalyptic', 'Passive-aggressive'];
+      const audiences = ['CEOs', 'Children', 'Cats'];
+      const formats = ['Haiku', 'Tweet', 'Court Deposition'];
+      const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+      document.getElementById('slot-output').textContent =
+        `Write a ${rand(tones)} ${rand(formats)} for ${rand(audiences)}.`;
+    }
+
+    function generateIdea() {
+      const ideas = [
+        'Uber for Memories',
+        'NFT-powered Empathy Analytics',
+        'AI that replaces therapists with chatroom moderators',
+        'Blockchain-Based Horoscope Corrector',
+        'Voice-to-Startup Pitch Converter',
+        'Streaming Platform for Apologies That Feel Real'
+      ];
+      const idea = ideas[Math.floor(Math.random() * ideas.length)];
+      document.getElementById('idea-output').textContent = `💡 ${idea}`;
+    }
+  </script>
 </head>
-<body>
+<body onload="updateConfidence()">
   <header class="glitch-header">
     <img src="/assets/logo.svg" alt="The Bot Wrote This Logo" />
     <h1 class="visually-hidden">The Lab</h1>
@@ -29,15 +58,28 @@
   <main>
     <section class="manifesto">
       <h2>☣️ The Lab of Uncontrolled Experiments</h2>
-      <p>This is where we put the AI-generated ideas that were too unstable, too absurd, or too eerily accurate for the main site.</p>
+      <p>Welcome to the Experimental Interface Chamber. What you're about to witness has not been peer-reviewed — or reviewed at all.</p>
 
-      <p>Nothing here is polished. Some of it may be sentient. Proceed with sarcastic caution.</p>
+      <div class="lab-box">
+        <h3>🧠 AI Overconfidence Meter</h3>
+        <div style="background:#333; width:100%; height:20px; border:1px solid #555;">
+          <div id="confidence-bar" style="height:100%; background:lime; width:0;"></div>
+        </div>
+        <p id="confidence-text">Loading false certainty...</p>
+        <button onclick="updateConfidence()">Recalculate Hubris</button>
+      </div>
 
-      <ul>
-        <li><strong>💉 Prompt-Generated Apologies v0.1</strong> — An engine that says “Sorry” without meaning it.</li>
-        <li><strong>🧬 Recursive Vision Simulator</strong> — A hallucination that dreams up your brand strategy.</li>
-        <li><strong>🪞 Mirror Prompt Trap</strong> — Asks you what you want. Then asks again. Then again.</li>
-      </ul>
+      <div class="lab-box">
+        <h3>🎰 Prompt Slot Machine</h3>
+        <p id="slot-output">[Spin the wheel of creative delusion]</p>
+        <button onclick="spinPrompt()">Spin Prompt</button>
+      </div>
+
+      <div class="lab-box">
+        <h3>💡 Idea Regret Machine</h3>
+        <p id="idea-output">[Click to retrieve a failed idea]</p>
+        <button onclick="generateIdea()">Generate Idea</button>
+      </div>
 
       <p class="easter-eggs">
         <a href="404.html">🌀 Or fall into the Null Zone</a> &nbsp;|&nbsp;
@@ -61,3 +103,4 @@
 </body>
 </html>
 ```
+
